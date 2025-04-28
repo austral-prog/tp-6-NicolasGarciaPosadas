@@ -1,20 +1,36 @@
-# Replace the "ANSWER HERE" with your answer
+def remove_elements(lst):
+    # Eliminamos primer, quinto y sexto elemento si existen
+    indices = [0, 4, 5]
+    # Para no alterar la lista mientras la recorremos, lo hacemos en orden inverso
+    for i in sorted(indices, reverse=True):
+        if i < len(lst):
+            del lst[i]
+    return lst
 
-def remove_elements(list_to_remove_elements):
-    return "ANSWER HERE"  # Remove this line and implement
+def add_elements(lst):
+    # Agregamos 'Pink' al principio y 'Yellow' al final
+    lst.insert(0, 'Pink')
+    lst.append('Yellow')
+    return lst
 
+def is_empty(lst):
+    # Devuelve True si está vacía
+    return len(lst) == 0
 
-def add_elements(list_to_add_elements):
-    return "ANSWER HERE"  # Remove this line and implement
+def check_lists(lst1, lst2):
+    # Verificamos que ambas tengan al menos 3 elementos
+    if len(lst1) >= 3 and len(lst2) >= 3:
+        return lst1[2] == lst2[2]
+    else:
+        return False
 
-
-def is_empty(list_to_check):
-    return "ANSWER HERE"  # Remove this line and implement
-
-
-def check_lists(list_to_compare1, list_to_compare2):
-    return "ANSWER HERE"  # Remove this line and implement
-
-
-def list_of_lists(list_of_lists_to_modify):
-    return "ANSWER HERE"  # Remove this line and implement
+def list_of_lists(lists):
+    # Modificamos cada sublista según las instrucciones
+    result = []
+    if len(lists) >= 1:
+        result.append(lists[0][:2])
+    if len(lists) >= 2:
+        result.append(lists[1][1:4])
+    if len(lists) >= 3:
+        result.append(lists[2][-2:])
+    return result
